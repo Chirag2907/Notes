@@ -1,0 +1,55 @@
+.card {
+  text-align: center;
+  border-style: dashed;
+  border-width: 2px;
+  border-color: #ccc;
+  border-radius: 15px;
+  padding: 11rem;
+  background-color: blueviolet;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+.div1 {
+  margin: 2rem 0rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+h1{
+  margin: 2rem auto;
+}
+
+.App-header {
+  background-color: #292E3A;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: rgb(226, 207, 183);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,18 @@
+.card_border {
+    justify-content: center;
+    align-items: center;
+    border-style: double;
+    border-width: 1px;
+    border-color: #ccc;
+    border-radius: 15px;
+    padding: 2rem;
+    background-color: rgb(139, 67, 206);
+    width: 20rem;
+    margin: 1rem auto;
+
+}
+
+h3{
+    margin: auto auto;
+    color: rgb(197, 211, 216);
+}
