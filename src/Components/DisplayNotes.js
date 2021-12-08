@@ -19,4 +19,5 @@ const DisplayNotes = (props) => {
   );
 };
 
+
 export default DisplayNotes;
