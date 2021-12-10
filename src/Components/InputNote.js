@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import "./InputNote.css";
 const InputNote = (props) => {
-  const [Title, setTitle] = useState("");
-  const [Desc, setDesc] = useState("");
+  const [Title, setTitle] = useState(props.head);
+  const [Desc, setDesc] = useState(props.body);
 
   const submit = (e) => {
     e.preventDefault();
@@ -13,6 +13,9 @@ const InputNote = (props) => {
     } else {
       props.addNote(Title, Desc);
       props.removeInput();
+      props.setBody("");
+      props.setHead("");
+      props.setPopup(true);
     }
   };
 

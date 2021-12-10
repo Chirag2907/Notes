@@ -6,13 +6,13 @@ import "./DisplayNotes.css";
 const DisplayNotes = (props) => {
   return (
     <>
-      <div className="layer" onClick={props.removePopup}></div>
+      <div className="layer" onClick={props.removePopup} />
       {props.notes.length === 0 ? (
         <div className="no-notes">No notes to display</div>
       ) : (
         <div className="DisplayGrid">
           {props.notes.map((note) => {
-            return <Card key={note.id} title={note.title} desc={note.desc} />;
+            return <Card key={note.id} id={note.id} onEdit={props.onEdit} title={note.title} desc={note.desc} onDelete={props.onDelete} />;
           })}
         </div>
       )}

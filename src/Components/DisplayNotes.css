@@ -1,7 +1,9 @@
 .no-notes {
+  position: fixed;
   font-size: 1.5em;
-  color: white;
+  color: rgba(255, 255, 255, 0.671);
   text-align: center;
+  margin-top: 20%;
 }
 
 .DisplayGrid {
@@ -9,11 +11,12 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
   padding: 10px;
-  position: fixed;
+  position: absolute;
   z-index: 1;
 }
 
 .layer {
+  display: grid;
   place-items: center;
   height: 100%;
   width: 100%;

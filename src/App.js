@@ -7,23 +7,35 @@ function App() {
   const [popup, setPopup] = useState(false);
   const [Input, setInput] = useState(false);
 
+  const [Head, setHead] = useState("");
+  const [Body, setBody] = useState("");
+
   const [Notes, setNotes] = useState([
     {
-      id: 1,
-      title: "First note",
-      desc: "This is my first note",
-    },
-    {
-      id: 2,
-      title: "Second note",
-      desc: "This is my second note",
-    },
-    {
-      id: 3,
-      title: "Third note",
-      desc: "This is my third note",
-    },
+      id: 0,
+      title: "Sample Note",
+      desc: "This is a sample note! Click to edit/delete",
+    } 
   ]);
+
+  const onDelete = (key) => {
+    setNotes(Notes.filter((e) => {
+      return e.id !== key;
+    }));
+  }
+
+  const onEdit = (key) => {
+    for(let i = 0; i < Notes.length; i++) {
+      if(Notes[i].id === key) {
+        setHead(Notes[i].title);
+        setBody(Notes[i].desc);
+        setInput(true);
+        setPopup(false);
+        onDelete(key);
+      }
+    }
+  }
+  
 
   const addNote = (title, desc) => {
     setNotes([
@@ -64,8 +76,8 @@ function App() {
             <h3>My Notes ({Notes.length})</h3>
           </div>
         </div>
-        {Input && <InputNote addNote={addNote} removeInput={removeInput} />}
-        {popup && <DisplayNotes notes={Notes} removePopup={removePopup} />}
+        {Input && <InputNote head={Head} setHead={setHead} setBody={setBody} setPopup={setPopup} body={Body} addNote={addNote} removeInput={removeInput} />}
+        {popup && <DisplayNotes notes={Notes} removePopup={removePopup} onEdit={onEdit} onDelete={onDelete}/>}
       </header>
     </div>
   );

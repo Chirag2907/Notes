@@ -21,7 +21,7 @@ const Card = (props) => {
             {props.desc.length > 50? props.desc.substring(0, 50) + "..." : props.desc}
         </p>
     </section>
-    {Edit && <EditNotes title={props.title} desc={props.desc} removeEdit={removeEdit} />}
+    {Edit && <EditNotes onEdit={props.onEdit} onDelete={props.onDelete} title={props.title} desc={props.desc} id={props.id} removeEdit={removeEdit} />}
     </>
   );
 };
