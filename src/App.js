@@ -57,18 +57,18 @@ function App() {
       <header className="App-header center">
         <h1>Notes</h1>
         <div className="div1 center">
-          <div className="card" onClick={note}>
+          <div id="card" className="card" onClick={note}>
             <h3>New Note</h3>
           </div>
-          <div className="card" onClick={display}>
+          <div id="card" className="card" onClick={display}>
             <h3>My Notes ({Notes.length})</h3>
           </div>
         </div>
-        {Input && <InputNote removeInput={removeInput} addNote={addNote} />}
+        {Input && <InputNote addNote={addNote} removeInput={removeInput} />}
         {popup && <DisplayNotes notes={Notes} removePopup={removePopup} />}
       </header>
     </div>
   );
-}
+} 
 
 export default App;

@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useState } from 'react'
 import "./Card.css";
+import EditNotes from './EditNotes';
 const Card = (props) => {
+  const [Edit, setEdit] = useState(false);
+
+  const openEdit = () => {
+    setEdit(true);
+  }
+
+  const removeEdit = () => {
+    setEdit(false);
+  }
+  
+  
   return (
-    <div className="card_border">
+    <>
+    <section className="card_border" onClick={openEdit}>
       <h3>{props.title}</h3>
         <p>
-            {props.desc}
+            {props.desc.length > 50? props.desc.substring(0, 50) + "..." : props.desc}
         </p>
-    </div>
+    </section>
+    {Edit && <EditNotes title={props.title} desc={props.desc} removeEdit={removeEdit} />}
+    </>
   );
 };
 

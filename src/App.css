@@ -17,6 +17,12 @@
   gap: 4rem;
 }
 
+#card:hover {
+  border-color: rgb(57, 28, 83);
+  /* border-style: solid; */
+  background-color: #8e3ecf;
+}
+
 .center {
   text-align: center;
   align-items: center;

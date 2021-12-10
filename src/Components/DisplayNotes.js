@@ -1,10 +1,11 @@
 import React from "react";
 import Card from "./Card";
 import "./DisplayNotes.css";
+// import EditNotes from './EditNotes';
 
 const DisplayNotes = (props) => {
   return (
-    <div className="DisplayNotes">
+    <>
       <div className="layer" onClick={props.removePopup}></div>
       {props.notes.length === 0 ? (
         <div className="no-notes">No notes to display</div>
@@ -15,9 +16,9 @@ const DisplayNotes = (props) => {
           })}
         </div>
       )}
-    </div>
+      {/* {Edit && <EditNotes note={props.notes} />} */}
+    </>
   );
 };
-
 
 export default DisplayNotes;

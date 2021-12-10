@@ -1,0 +1,69 @@
+.EditCard {
+  position: fixed;
+  border-style: double;
+  border-width: 2px;
+  border-color: #ccc;
+  border-radius: 15px;
+  padding: 2rem;
+  background-color: rgb(119, 18, 212);
+  width: 50rem;
+  height: 30rem;
+  z-index: 2;
+  margin: 2.5rem 9.5rem;
+  z-index: 100;
+}
+
+.layer2 {
+  position: fixed;
+  height: 100% !important;
+  width: 100% !important;
+  z-index: 1;
+  backdrop-filter: blur(4px);
+  left: 0;
+  top: 0;
+}
+
+.tab {
+  display: inline-block;
+  margin-left: 180px;
+}
+
+.tab-r {
+  display: inline-block;
+  margin-right: 160px;
+}
+
+.edit-button {
+  background-color: rgb(26, 194, 48);
+}
+
+.edit-button:hover {
+  background-color: rgb(16, 139, 33);
+}
+
+.delete-button {
+  background-color: rgb(255, 0, 0);
+}
+
+.delete-button:hover {
+  background-color: rgb(180, 0, 0);
+}
+
+.bold-title {
+  font-size: 2.5rem;
+  color: rgb(243, 203, 203);
+}
+
+.table {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}

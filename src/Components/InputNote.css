@@ -19,6 +19,11 @@ button{
     border-radius: 1rem;
 }
 
+button:hover {
+    background-color: rgb(105, 59, 233);
+    color: #fff;
+}
+
 .layer1 {
     position: fixed;
     width: 100%;

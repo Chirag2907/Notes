@@ -5,12 +5,18 @@
     border-width: 1px;
     border-color: #ccc;
     border-radius: 15px;
-    padding: 2rem;
+    padding: 2.5rem;
     background-color: rgb(139, 67, 206);
     width: 20rem;
     margin: 1rem auto;
     cursor: pointer;
+}
 
+
+section:hover {
+    background-color:rgb(149, 88, 207);
+    border-color: rgb(0, 0, 0);
+    border-width: 2px;
 }
 
 h3{
